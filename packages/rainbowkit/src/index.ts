@@ -1,5 +1,6 @@
 export * from './components';
 export { wallet } from './wallets/walletConnectors';
+export { Cypress, Baobab } from './wallets/defaultChains';
 export { getDefaultWallets } from './wallets/getDefaultWallets';
 export { getWalletConnectConnector } from './wallets/getWalletConnectConnector';
 export { connectorsForWallets } from './wallets/connectorsForWallets';
