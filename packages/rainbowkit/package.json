@@ -23,10 +23,10 @@
     "build": "node build.js",
     "build:watch": "node build.js --watch",
     "dev": "pnpm build:watch & pnpm typegen:watch",
-    "prepare": "MINIFY_CSS=true pnpm build",
+    "prepare": "pnpm build MINIFY_CSS=true",
     "prebuild": "pnpm typegen",
     "typecheck": "pnpm tsc --noEmit",
-    "typegen": "tsc --emitDeclarationOnly || true",
+    "typegen": "tsc --emitDeclarationOnly || exit 0",
     "typegen:watch": "tsc --emitDeclarationOnly --watch"
   },
   "keywords": [

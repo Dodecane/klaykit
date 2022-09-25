@@ -9,6 +9,7 @@ import { omni, steak } from './omni/omni';
 import { rainbow } from './rainbow/rainbow';
 import { trust } from './trust/trust';
 import { walletConnect } from './walletConnect/walletConnect';
+import { kaikas } from './kaikas/kaikas';
 
 export const wallet = {
   argent,
@@ -24,4 +25,5 @@ export const wallet = {
   steak,
   trust,
   walletConnect,
+  kaikas,
 };
