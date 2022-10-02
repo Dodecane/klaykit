@@ -126,7 +126,7 @@ export class KaikasConnector extends Connector<
       this.getProvider(),
       this.getAccount(),
     ])
-    return new providers.Web3Provider(
+    return new KlaytnProvider(
       <providers.ExternalProvider>provider,
       chainId,
     ).getSigner(account)
@@ -157,11 +157,6 @@ export class KaikasConnector extends Connector<
     } catch {
       return false
     }
-  }
-
-  async switchChain(chainId: number) : Promise<never> {
-    alert("Programmatic network switching is unsupported, please switch networks manually in Kaikas")
-    throw new UserRejectedRequestError("unsupported operation")
   }
 
   async watchAsset({
@@ -230,6 +225,7 @@ export class KaikasConnector extends Connector<
 
 import { Provider, WebSocketProvider } from '@wagmi/core'
 import { Client } from '@wagmi/core'
+import { KlaytnProvider } from './klaytnProvider'
 
 export let client: Client<Provider, WebSocketProvider>
 

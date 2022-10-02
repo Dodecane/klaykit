@@ -15,7 +15,7 @@ export const Cypress : Chain = {
       default: 'https://public-node-api.klaytnapi.com/v1/cypress',
     },
     blockExplorers: {
-      default: { name: 'Klaytn Scope', url: 'https://scope.klaytn.com/' },
+      default: { name: 'Klaytn Scope', url: 'https://scope.klaytn.com' },
     },
     testnet: false,
 };
@@ -35,7 +35,7 @@ export const Baobab : Chain = {
       default: 'https://api.baobab.klaytn.net:8651/',
     },
     blockExplorers: {
-      default: { name: 'Klaytn Scope (Baobab)', url: 'https://baobab.scope.klaytn.com/' },
+      default: { name: 'Klaytn Scope (Baobab)', url: 'https://baobab.scope.klaytn.com' },
     },
     testnet: true,
 };
