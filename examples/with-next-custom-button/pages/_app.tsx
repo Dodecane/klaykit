@@ -4,30 +4,21 @@ import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
-  connectorsForWallets,
-  wallet,
+  Cypress,
+  Baobab,
 } from '@rainbow-me/rainbowkit';
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
+import { configureChains, createClient, WagmiConfig } from 'wagmi';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
-    chain.mainnet,
-    chain.polygon,
-    chain.optimism,
-    chain.arbitrum,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
-      ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
-      : []),
+    Cypress,
+    Baobab,
   ],
-  [
-    alchemyProvider({ apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC' }),
-    publicProvider(),
-  ]
+  [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
-const { wallets } = getDefaultWallets({
+const { connectors } = getDefaultWallets({
   appName: 'RainbowKit demo',
   chains,
 });
@@ -35,18 +26,6 @@ const { wallets } = getDefaultWallets({
 const demoAppInfo = {
   appName: 'Rainbowkit Demo',
 };
-
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: 'Other',
-    wallets: [
-      wallet.argent({ chains }),
-      wallet.trust({ chains }),
-      wallet.ledger({ chains }),
-    ],
-  },
-]);
 
 const wagmiClient = createClient({
   autoConnect: true,

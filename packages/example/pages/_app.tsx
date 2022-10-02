@@ -2,15 +2,14 @@ import './global.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import {
   AvatarComponent,
-  Chain,
-  connectorsForWallets,
+  Baobab,
+  Cypress,
   darkTheme,
   DisclaimerComponent,
   getDefaultWallets,
   lightTheme,
   midnightTheme,
   RainbowKitProvider,
-  wallet,
 } from '@rainbow-me/rainbowkit';
 
 import {
@@ -22,55 +21,25 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import {
-  chain,
   configureChains,
   createClient,
   useDisconnect,
   WagmiConfig,
 } from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
 import { AppContextProps } from '../lib/AppContextProps';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const RAINBOW_TERMS = 'https://rainbow.me/terms-of-use';
 
-const avalancheChain: Chain = {
-  blockExplorers: {
-    default: { name: 'SnowTrace', url: 'https://snowtrace.io' },
-    etherscan: { name: 'SnowTrace', url: 'https://snowtrace.io' },
-  },
-  id: 43_114,
-  name: 'Avalanche',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'Avalanche',
-    symbol: 'AVAX',
-  },
-  network: 'avalanche',
-  rpcUrls: {
-    default: 'https://api.avax.network/ext/bc/C/rpc',
-  },
-  testnet: false,
-};
-
 const { chains, provider, webSocketProvider } = configureChains(
   [
-    chain.mainnet,
-    chain.polygon,
-    chain.optimism,
-    chain.arbitrum,
-    avalancheChain,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
-      ? [chain.goerli, chain.kovan, chain.rinkeby, chain.ropsten]
-      : []),
+    Cypress,
+    Baobab
   ],
-  [
-    alchemyProvider({ apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC' }),
-    publicProvider(),
-  ]
+  [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
-const { wallets } = getDefaultWallets({
+const { connectors } = getDefaultWallets({
   appName: 'RainbowKit demo',
   chains,
 });
@@ -106,20 +75,6 @@ const CustomAvatar: AvatarComponent = ({ size }) => {
     </div>
   );
 };
-
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: 'Other',
-    wallets: [
-      wallet.argent({ chains }),
-      wallet.trust({ chains }),
-      wallet.steak({ chains }),
-      wallet.imToken({ chains }),
-      wallet.ledger({ chains }),
-    ],
-  },
-]);
 
 const wagmiClient = createClient({
   autoConnect: true,

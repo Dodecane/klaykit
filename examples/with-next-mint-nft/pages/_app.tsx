@@ -4,27 +4,21 @@ import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
-  connectorsForWallets,
-  wallet,
+  Baobab,
+  Cypress
 } from '@rainbow-me/rainbowkit';
-import { chain, createClient, configureChains, WagmiConfig } from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
+import { createClient, configureChains, WagmiConfig } from 'wagmi';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
-    chain.rinkeby,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
-      ? [chain.rinkeby]
-      : []),
+    Cypress,
+    Baobab
   ],
-  [
-    alchemyProvider({ apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC' }),
-    publicProvider(),
-  ]
+  [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
-const { wallets } = getDefaultWallets({
+const { connectors } = getDefaultWallets({
   appName: 'RainbowKit Mint NFT Demo',
   chains,
 });
@@ -32,14 +26,6 @@ const { wallets } = getDefaultWallets({
 const demoAppInfo = {
   appName: 'RainbowKit Mint NFT Demo',
 };
-
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: 'Other',
-    wallets: [wallet.argent({ chains }), wallet.trust({ chains })],
-  },
-]);
 
 const wagmiClient = createClient({
   autoConnect: true,
