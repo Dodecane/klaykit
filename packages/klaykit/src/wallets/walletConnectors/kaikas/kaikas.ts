@@ -17,6 +17,10 @@ export const kaikas = ({ chains, shimDisconnect }: KaikasOptions): Wallet => ({
   downloadUrls: {
     browserExtension:
       'https://chrome.google.com/webstore/detail/kaikas/jblndlipeogpafnldhgmapagcccfchpi',
+    android: 'https://play.google.com/store/apps/details?id=io.klutch.wallet',
+    ios: 'https://apps.apple.com/app/kaikas-mobile-crypto-wallet/id1626107061',
+    qrCode:
+      'https://kaikas.zendesk.com/hc/en-us/articles/10915901333913-How-do-I-install-Mobile-Kaikas-',
   },
   createConnector: () => ({
     connector: new KaikasConnector({
