@@ -1,5 +1,5 @@
 <a href="https://klaykit.vercel.app/">
-  <img alt="klaykit" src="https://klaykit.vercel.app/klaykit.svg" />
+  <img alt="klaykit" src="https://klaykit.vercel.app/_next/image?url=%2Fbanner.png&w=3840&q=75" />
 </a>
 
 # KlayKit
