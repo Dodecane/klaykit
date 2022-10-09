@@ -1,34 +1,16 @@
-import { connectorsForWallets, getDefaultWallets, wallet } from 'klaykit';
+import { Baobab, Cypress, getDefaultWallets } from 'klaykit';
 import React from 'react';
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
+import { configureChains, createClient, WagmiConfig } from 'wagmi';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 export const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
-  [
-    alchemyProvider({ apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC' }),
-    publicProvider(),
-  ]
+  [Cypress, Baobab],
+  [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
-const { wallets } = getDefaultWallets({
+const { connectors } = getDefaultWallets({
   chains,
 });
-
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: 'More',
-    wallets: [
-      wallet.argent({ chains }),
-      wallet.trust({ chains }),
-      wallet.omni({ chains }),
-      wallet.imToken({ chains }),
-      wallet.ledger({ chains }),
-    ],
-  },
-]);
 
 const wagmiClient = createClient({
   autoConnect: true,

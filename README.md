@@ -39,7 +39,6 @@ You can use the CodeSandbox links below try out KlayKit:
 
 The following examples are provided in the [examples](./examples/) folder of this repo.
 
-- `with-create-react-app`
 - `with-next`
 - `with-next-custom-button`
 - `with-next-mint-nft`

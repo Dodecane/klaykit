@@ -177,9 +177,8 @@ export const tokens = {
     },
   },
   fonts: {
-    normal:
-      'SFRounded, ui-rounded, SF Pro Rounded, system-ui, Helvetica Neue, Arial, Helvetica, sans-serif',
-    mono: 'SFMono, ui-monospace, monospace',
+    normal: 'Outfit, system-ui, Helvetica Neue, Arial, Helvetica, sans-serif',
+    mono: 'JetBrains Mono, ui-monospace, monospace',
   },
   space: {
     '0': '0px',

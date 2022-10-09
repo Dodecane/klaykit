@@ -7,8 +7,6 @@ import {
   MODAL_COMPACT_SIZE,
   MODAL_SIZE,
   modalWrapper,
-  PHONE_SIZE,
-  phoneWrapper,
 } from './Hero.css';
 
 export function Hero() {
@@ -42,13 +40,6 @@ export function Hero() {
               height={MODAL_COMPACT_SIZE.height}
               src="/hero-compact.png"
               width={MODAL_COMPACT_SIZE.width}
-            />
-          </Box>
-          <Box className={phoneWrapper}>
-            <NextImage
-              height={PHONE_SIZE.height}
-              src="/hero-iphone.png"
-              width={PHONE_SIZE.width}
             />
           </Box>
         </Box>

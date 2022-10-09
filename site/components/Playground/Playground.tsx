@@ -136,8 +136,8 @@ export function Playground() {
           >
             Make your Klaytn login experience feel right at home on your
             website. KlayKit allows you to fully customize color, border radius,
-            wallet providers and a lot more — all through an easy-to-use API.
-            Get a feel for it below!
+            modal size and a lot more — all through an easy-to-use API. Get a
+            feel for it below!
           </Text>
         </Wrapper>
 

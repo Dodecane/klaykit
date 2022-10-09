@@ -14,7 +14,6 @@ import { Wrapper } from 'components/Wrapper/Wrapper';
 import copy from 'copy-to-clipboard';
 import { vars } from 'css/vars.css';
 import { useCoolMode } from 'lib/useCoolMode';
-import NextImage from 'next/image';
 import NextLink from 'next/link';
 import React, { Ref, useState } from 'react';
 import { useAccount } from 'wagmi';
@@ -56,7 +55,7 @@ export default function Home() {
             style={{ lineHeight: 1 }}
             weight="bold"
           >
-            The best way to connect a wallet
+            The best way to connect a Klaytn wallet
           </Text>
           <Text
             as="p"
@@ -137,11 +136,9 @@ export default function Home() {
                 'Easy Installation',
                 'Custom Themes',
                 'Built-in Themes',
-                'Custom Wallets List',
                 'Light and Dark Mode',
-                'Custom Chains',
-                'App Store and Google Play Integration',
                 'Custom Connect Button',
+                'Custom Avatars',
               ].map(value => (
                 <Box
                   alignItems="center"
@@ -184,57 +181,11 @@ export default function Home() {
         paddingY={{ xs: '11', lg: '12' }}
       >
         <Wrapper>
-          <Text
-            align={{ xs: 'left', md: 'center' }}
-            as="h2"
-            size={{ xs: '7', md: '9' }}
-            style={{ lineHeight: '1' }}
-            weight="bold"
-          >
-            Made with ❤️ by your frens at{' '}
-            <Box
-              as="span"
-              display={{ md: 'none' }}
-              marginLeft="2"
-              position="relative"
-              top="3"
-            >
-              <NextImage
-                alt="KlayKit logo"
-                height={36}
-                src="/klaykit-logo.png"
-                width={36}
-              />
-            </Box>
-            <Box
-              as="span"
-              display={{ xs: 'none', md: 'inline' }}
-              marginLeft="2"
-              position="relative"
-              top="3"
-            >
-              <NextImage
-                alt="KlayKit logo"
-                height={56}
-                src="/klaykit-logo.png"
-                width={56}
-              />
-            </Box>
-          </Text>
-
-          <Box
-            display="flex"
-            flexDirection={{ xs: 'column', sm: 'row' }}
-            gap={{ xs: '5', sm: '8' }}
-            justifyContent="center"
-          />
-
           <Box
             display="flex"
             flexDirection="column"
             gap="6"
             justifyContent="center"
-            marginTop={{ xs: '11', lg: '12' }}
             textAlign="center"
           >
             <Text size="4" weight="bold">
