@@ -38,7 +38,7 @@ export default function Home() {
             marginBottom="3"
             size={{ xs: '5', md: '8' }}
             style={{
-              backgroundImage: `linear-gradient(270deg, ${vars.colors.purple50} 0%, ${vars.colors.blue50} 100%)`,
+              backgroundImage: `linear-gradient(270deg, ${vars.colors.orange50} 0%, ${vars.colors.red50} 100%)`,
               display: 'inline-block',
               lineHeight: 1,
               WebkitBackgroundClip: 'text',
@@ -71,7 +71,13 @@ export default function Home() {
           </Box>
           <Box marginBottom={{ xs: '0', md: '11' }}>
             <NextLink href="/docs" passHref>
-              <Button as="a" size="xl" variant="purpleGradient">
+              <Button
+                as="a"
+                size="xl"
+                style={{
+                  backgroundImage: `linear-gradient(270deg, ${vars.colors.orange50} 0%, ${vars.colors.red50} 100%)`,
+                }}
+              >
                 View the Docs
               </Button>
             </NextLink>
@@ -164,8 +170,10 @@ export default function Home() {
                 <Button
                   as="a"
                   size="xl"
-                  style={{ alignSelf: 'flex-start' }}
-                  variant="purpleGradient"
+                  style={{
+                    alignSelf: 'flex-start',
+                    backgroundImage: `linear-gradient(270deg, ${vars.colors.orange50} 0%, ${vars.colors.red50} 100%)`,
+                  }}
                 >
                   View the Docs
                 </Button>

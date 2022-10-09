@@ -34,8 +34,8 @@ export const link = recipe({
         }),
       ]),
       true: style([
-        atoms({ backgroundColor: { base: 'blue' } }),
         style({
+          backgroundImage: `linear-gradient(270deg, ${vars.colors.orange50} 0%, ${vars.colors.red50} 100%)`,
           boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.2)`,
           color: vars.colors.labelWhite,
         }),

@@ -7,7 +7,7 @@ import { DocsLayout } from '../components/DocsLayout/DocsLayout';
 import { vars } from '../css/vars.css';
 import '../css/global.css';
 
-const highlightColors = [vars.colors.orange, vars.colors.blue, vars.colors.red];
+const highlightColors = [vars.colors.orange50, vars.colors.red50];
 
 function getColor() {
   return highlightColors[Math.floor(Math.random() * highlightColors.length)];

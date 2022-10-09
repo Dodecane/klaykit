@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <Box position="relative">
       <Box
-        backgroundColor="purple90"
+        backgroundColor="red50"
         position="absolute"
         style={{
           borderRadius: '100%',
