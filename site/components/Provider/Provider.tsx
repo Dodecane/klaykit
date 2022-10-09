@@ -17,7 +17,6 @@ export const { chains, provider } = configureChains(
 );
 
 const { wallets } = getDefaultWallets({
-  appName: 'rainbowkit.com',
   chains,
 });
 

@@ -3,15 +3,13 @@ import { WalletList } from './Wallet';
 import { connectorsForWallets } from './connectorsForWallets';
 import { brave } from './walletConnectors/brave/brave';
 import { injected } from './walletConnectors/injected/injected';
+import { kaikas } from './walletConnectors/kaikas/kaikas';
 import { metaMask } from './walletConnectors/metaMask/metaMask';
 import { walletConnect } from './walletConnectors/walletConnect/walletConnect';
-import { kaikas } from './walletConnectors/kaikas/kaikas';
 
 export const getDefaultWallets = ({
-  appName,
   chains,
 }: {
-  appName: string;
   chains: Chain[];
 }): {
   connectors: ReturnType<typeof connectorsForWallets>;
@@ -20,9 +18,7 @@ export const getDefaultWallets = ({
   const wallets: WalletList = [
     {
       groupName: 'Recommended',
-      wallets: [
-        kaikas({ chains }),
-      ],
+      wallets: [kaikas({ chains })],
     },
     {
       groupName: 'Others',

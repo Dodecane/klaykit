@@ -522,7 +522,7 @@ export function DownloadOptionsDetail({
         />
         <DownloadOptionsBox
           actionLabel="Get the app"
-          description="Use the mobile wallet to explore the world of Ethereum."
+          description="Use the mobile wallet to explore the world of Klaytn."
           iconBackground={wallet.iconBackground}
           iconUrl={wallet.iconUrl}
           isCompact={isCompact}

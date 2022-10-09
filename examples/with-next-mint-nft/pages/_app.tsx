@@ -5,21 +5,17 @@ import {
   RainbowKitProvider,
   getDefaultWallets,
   Baobab,
-  Cypress
+  Cypress,
 } from '@rainbow-me/rainbowkit';
 import { createClient, configureChains, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [
-    Cypress,
-    Baobab
-  ],
+  [Cypress, Baobab],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit Mint NFT Demo',
   chains,
 });
 

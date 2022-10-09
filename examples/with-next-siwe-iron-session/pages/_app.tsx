@@ -18,15 +18,11 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [
-    Cypress,
-    Baobab,
-  ],
+  [Cypress, Baobab],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit demo',
   chains,
 });
 
@@ -85,7 +81,7 @@ export default function App({ Component, pageProps }: AppProps) {
         return new SiweMessage({
           domain: window.location.host,
           address,
-          statement: 'Sign in with Ethereum to the app.',
+          statement: 'Sign in with Klaytn to the app.',
           uri: window.location.origin,
           version: '1',
           chainId,

@@ -53,7 +53,7 @@ export function ConnectModalIntro({
               </Text>
               <Text color="modalTextSecondary" size="14" weight="medium">
                 Wallets are used to send, receive, store, and display digital
-                assets like Ethereum and NFTs.
+                assets like Klaytn and NFTs.
               </Text>
             </Box>
           </Box>

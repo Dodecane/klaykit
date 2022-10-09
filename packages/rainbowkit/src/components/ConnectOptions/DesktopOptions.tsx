@@ -374,7 +374,7 @@ export function DesktopOptions({ onClose }: { onClose: () => void }) {
                 >
                   <Box paddingY="4">
                     <Text color="modalTextSecondary" size="14" weight="medium">
-                      New to Ethereum wallets?
+                      New to Klaytn wallets?
                     </Text>
                   </Box>
                   <Box

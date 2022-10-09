@@ -47,8 +47,7 @@ export const links: LinksFunction = () => [
 // See: https://remix.run/docs/en/v1/guides/envvars#browser-environment-variables
 export const loader: LoaderFunction = () => {
   const data: LoaderData = {
-    ENV: {
-    },
+    ENV: {},
   };
 
   return json(data);
@@ -63,15 +62,11 @@ export default function App() {
   // See: https://remix.run/docs/en/v1/guides/constraints#no-module-side-effects
   const [{ client, chains }] = useState(() => {
     const { chains, provider, webSocketProvider } = configureChains(
-      [
-        Cypress,
-        Baobab,
-      ],
+      [Cypress, Baobab],
       [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
     );
 
     const { connectors } = getDefaultWallets({
-      appName: 'RainbowKit Remix Example',
       chains,
     });
 

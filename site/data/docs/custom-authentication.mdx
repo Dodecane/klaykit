@@ -7,8 +7,6 @@ description: Connect to your own authentication back-end
 
 ## Connect to your own authentication back-end
 
-While RainbowKit provides [first-class support for Sign-In with Ethereum and NextAuth.js,](/docs/authentication#set-up-sign-in-with-ethereum-and-nextauthjs) you can also integrate with custom back-ends and message formats.
-
 ### Creating a custom adapter
 
 First create an authentication adapter. This allows RainbowKit to create/prepare messages and communicate with your back-end.
@@ -29,7 +27,7 @@ const authenticationAdapter = createAuthenticationAdapter({
     return new SiweMessage({
       domain: window.location.host,
       address,
-      statement: 'Sign in with Ethereum to the app.',
+      statement: 'Sign in with Klaytn to the app.',
       uri: window.location.origin,
       version: '1',
       chainId,

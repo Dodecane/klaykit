@@ -56,7 +56,7 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
           type: 'text',
         },
       },
-      name: 'Ethereum',
+      name: 'Klaytn',
     }),
   ];
 
@@ -93,7 +93,7 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     req.method === 'GET' &&
     req.query.nextauth.find(value => value === 'signin');
 
-  // Hide Sign-In with Ethereum from default sign page
+  // Hide Sign-In with Klaytn from default sign page
   if (isDefaultSigninPage) {
     authOptions.providers.pop();
   }

@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
           <a href="https://wagmi.sh" className={styles.card}>
             <h2>wagmi Documentation &rarr;</h2>
-            <p>Learn how to interact with Ethereum.</p>
+            <p>Learn how to interact with EVM chains.</p>
           </a>
 
           <a

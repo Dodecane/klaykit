@@ -134,7 +134,7 @@ export function Playground() {
             style={{ lineHeight: '28px', maxWidth: 720 }}
             weight="semibold"
           >
-            Make your Ethereum login experience feel right at home on your
+            Make your Klaytn login experience feel right at home on your
             website. RainbowKit allows you to fully customize color, border
             radius, wallet providers and a lot more — all through an easy-to-use
             API. Get a feel for it below!

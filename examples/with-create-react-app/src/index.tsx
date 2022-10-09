@@ -4,21 +4,22 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider, Cypress, Baobab } from '@rainbow-me/rainbowkit';
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  Cypress,
+  Baobab,
+} from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import App from './App';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [
-    Cypress,
-    Baobab,
-  ],
+  [Cypress, Baobab],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit demo',
   chains,
 });
 

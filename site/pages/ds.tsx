@@ -576,100 +576,100 @@ export default function DS() {
       </Text>
 
       <Text marginBottom="4" variant="titleLarge">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="titleLarge" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="titleLarge" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="titleLarge" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title1">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title1" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title1" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title1" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title2">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title2" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title2" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title2" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title3">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title3" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title3" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="title3" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="headline">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="headline" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="headline" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="headline" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="body">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="body" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="body" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="body" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="subhead">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="subhead" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="subhead" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="subhead" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="footnote">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="footnote" weight="medium">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="footnote" weight="bold">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
       <Text marginBottom="4" variant="footnote" weight="heavy">
-        Explore the new world of Ethereum
+        Explore the new world of Klaytn
       </Text>
 
       <Text as="h2" variant="title1" marginTop="11" marginBottom="8">

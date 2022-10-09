@@ -11,15 +11,11 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [
-    Cypress,
-    Baobab,
-  ],
+  [Cypress, Baobab],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'RainbowKit demo',
   chains,
 });
 
