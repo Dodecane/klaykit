@@ -32,9 +32,8 @@ For full documentation, visit [klaykit.vercel.app](https://klaykit.vercel.app/).
 
 You can use the CodeSandbox links below try out KlayKit:
 
-- with [Create React App](https://codesandbox.io/s/rainbowkit-create-react-app-1vwx1r)
-- with [Create React App (TypeScript)](https://codesandbox.io/s/rainbowkit-create-typescript-app-xuxnqy)
-- with [Next.js](https://codesandbox.io/s/rainbowkit-nextjs-gz890p)
+- with [Create React App](https://codesandbox.io/s/klaykit-create-react-app-2r27tu)
+- with [Create React App (TypeScript)](https://codesandbox.io/s/klaykit-create-typescript-app-f8cgph)
 
 ## Examples
 
