@@ -1,4 +1,4 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from 'klaykit';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 

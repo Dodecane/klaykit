@@ -1,20 +1,20 @@
-import {
-  ConnectButton,
-  darkTheme,
-  lightTheme,
-  RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
 import { Badge } from 'components/Badge/Badge';
 import { Box } from 'components/Box/Box';
 import { chains } from 'components/Provider/Provider';
 import { Text } from 'components/Text/Text';
 import { vars } from 'css/vars.css';
+import {
+  ConnectButton,
+  darkTheme,
+  lightTheme,
+  RainbowKitProvider,
+} from 'klaykit';
 import NextLink from 'next/link';
 import React from 'react';
-import pckg from '../../../packages/rainbowkit/package.json';
+import pckg from '../../../packages/klaykit/package.json';
 import { header, logo, row } from './Header.css';
 
-const RAINBOWKIT_VERSION = pckg.version;
+const KLAYKIT_VERSION = pckg.version;
 
 export function Header({
   darkMode,
@@ -31,11 +31,11 @@ export function Header({
       <Box className={row}>
         <NextLink href="/">
           <Box
-            alt="Rainbow logo"
+            alt="KlayKit logo"
             as="img"
             className={logo}
             marginRight="4"
-            src="/rainbow.svg"
+            src="/klaykit.svg"
             transform={{
               active: 'shrink',
               hover: 'grow',
@@ -56,9 +56,9 @@ export function Header({
           gap={{ xs: '1', sm: '4' }}
         >
           <Text style={{ lineHeight: 1 }} variant="title3" weight="bold">
-            RainbowKit
+            KlayKit
           </Text>
-          <Badge>{RAINBOWKIT_VERSION}</Badge>
+          <Badge>{KLAYKIT_VERSION}</Badge>
         </Box>
 
         <Box style={{ marginLeft: 'auto' }}>

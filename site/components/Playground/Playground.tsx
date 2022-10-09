@@ -1,12 +1,5 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import * as RadioGroup from '@radix-ui/react-radio-group';
-import {
-  __private__,
-  darkTheme,
-  lightTheme,
-  midnightTheme,
-  RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
 import clsx from 'clsx';
 import { Box } from 'components/Box/Box';
 import { MeshGradient } from 'components/MeshGradient/MeshGradient';
@@ -14,6 +7,13 @@ import { chains, Provider } from 'components/Provider/Provider';
 import { Text } from 'components/Text/Text';
 import { Wrapper } from 'components/Wrapper/Wrapper';
 import { motion } from 'framer-motion';
+import {
+  __private__,
+  darkTheme,
+  lightTheme,
+  midnightTheme,
+  RainbowKitProvider,
+} from 'klaykit';
 import { isAndroid } from 'lib/isMobile';
 import { useMounted } from 'lib/useMounted';
 import React, { useState } from 'react';
@@ -123,7 +123,7 @@ export function Playground() {
             style={{ lineHeight: 1 }}
             weight="bold"
           >
-            Give RainbowKit a spin
+            Give KlayKit a spin
           </Text>
           <Text
             align={{ xs: 'left', md: 'center' }}
@@ -135,9 +135,9 @@ export function Playground() {
             weight="semibold"
           >
             Make your Klaytn login experience feel right at home on your
-            website. RainbowKit allows you to fully customize color, border
-            radius, wallet providers and a lot more — all through an easy-to-use
-            API. Get a feel for it below!
+            website. KlayKit allows you to fully customize color, border radius,
+            wallet providers and a lot more — all through an easy-to-use API.
+            Get a feel for it below!
           </Text>
         </Wrapper>
 
@@ -178,9 +178,6 @@ export function Playground() {
                   >
                     <DesktopOptions onClose={() => {}} />
                   </div>
-                  {/* This div is placed on top of rainbowkit to make it non-interactive.
-                  pointer-events: none; was forcing scrollbar to show:
-                  https://linear.app/rainbow/issue/RNBW-3686/site-playground-wallet-list-showing-a-scrollbar */}
                   <div style={{ position: 'absolute', inset: 0 }} />
                 </div>
               </Box>
@@ -193,9 +190,6 @@ export function Playground() {
                   >
                     <DesktopOptions onClose={() => {}} />
                   </div>
-                  {/* This div is placed on top of rainbowkit to make it non-interactive.
-                  pointer-events: none; was forcing scrollbar to show:
-                  https://linear.app/rainbow/issue/RNBW-3686/site-playground-wallet-list-showing-a-scrollbar */}
                   <div style={{ position: 'absolute', inset: 0 }} />
                 </div>
               </Box>

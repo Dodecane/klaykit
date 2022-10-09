@@ -13,11 +13,11 @@ type TitleAndMetaTagsProps = {
 
 export function TitleAndMetaTags({
   color = 'white',
-  description = 'The best way to connect a wallet 🌈',
+  description = 'The best way to connect a Klaytn wallet',
   image,
   pathname,
-  title = 'RainbowKit',
-  url = 'https://rainbowkit.com',
+  title = 'KlayKit',
+  url = 'https://klaykit.vercel.app/',
 }: TitleAndMetaTagsProps) {
   const router = useRouter();
 
@@ -35,7 +35,6 @@ export function TitleAndMetaTags({
       <meta content={description} property="og:description" />
       <meta content={imageUrl} property="og:image" />
 
-      <meta content="@rainbowdotme" name="twitter:site" />
       <meta content="summary_large_image" name="twitter:card" />
 
       <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />

@@ -9,12 +9,12 @@ description: Connect to your own authentication back-end
 
 ### Creating a custom adapter
 
-First create an authentication adapter. This allows RainbowKit to create/prepare messages and communicate with your back-end.
+First create an authentication adapter. This allows KlayKit to create/prepare messages and communicate with your back-end.
 
 As an example, we could make an authentication adapter that lets us use [Sign-In with Ethereum](https://login.xyz) against some [custom API endpoints.](https://wagmi.sh/examples/sign-in-with-ethereum)
 
 ```tsx
-import { createAuthenticationAdapter } from '@rainbow-me/rainbowkit';
+import { createAuthenticationAdapter } from 'klaykit';
 import { SiweMessage } from 'siwe';
 
 const authenticationAdapter = createAuthenticationAdapter({
@@ -64,7 +64,7 @@ import {
   createAuthenticationAdapter,
   RainbowKitAuthenticationProvider,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 import { AppProps } from 'next/app';
 import { WagmiConfig } from 'wagmi';
 

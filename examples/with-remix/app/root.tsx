@@ -23,10 +23,10 @@ import {
   getDefaultWallets,
   Cypress,
   Baobab,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 
 import globalStylesUrl from './styles/global.css';
-import rainbowStylesUrl from '@rainbow-me/rainbowkit/styles.css';
+import rainbowStylesUrl from 'klaykit/styles.css';
 
 type Env = { ALCHEMY_API_KEY?: string; PUBLIC_ENABLE_TESTNETS?: string };
 
@@ -34,7 +34,7 @@ type LoaderData = { ENV: Env };
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'RainbowKit Remix Example',
+  title: 'KlayKit Remix Example',
   viewport: 'width=device-width,initial-scale=1',
 });
 

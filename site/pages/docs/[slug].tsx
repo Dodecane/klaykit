@@ -13,7 +13,7 @@ export default function DocPage({ doc }: { doc: Doc }) {
     <>
       <TitleAndMetaTags
         description={doc.description}
-        title={`${doc.title} — RainbowKit`}
+        title={`${doc.title} — KlayKit`}
       />
       <Box as="article">
         <Component components={components} />

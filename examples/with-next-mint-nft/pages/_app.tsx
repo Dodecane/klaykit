@@ -1,12 +1,12 @@
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
   getDefaultWallets,
   Baobab,
   Cypress,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 import { createClient, configureChains, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
@@ -20,7 +20,7 @@ const { connectors } = getDefaultWallets({
 });
 
 const demoAppInfo = {
-  appName: 'RainbowKit Mint NFT Demo',
+  appName: 'KlayKit Mint NFT Demo',
 };
 
 const wagmiClient = createClient({

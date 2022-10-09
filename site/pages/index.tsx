@@ -10,7 +10,6 @@ import { Link } from 'components/Link/Link';
 import { Playground } from 'components/Playground/Playground';
 import { Text } from 'components/Text/Text';
 import { TitleAndMetaTags } from 'components/TitleAndMetaTags/TitleAndMetaTags';
-import { UsedBy } from 'components/UsedBy/UsedBy';
 import { Wrapper } from 'components/Wrapper/Wrapper';
 import copy from 'copy-to-clipboard';
 import { vars } from 'css/vars.css';
@@ -22,7 +21,7 @@ import { useAccount } from 'wagmi';
 
 export default function Home() {
   const { isConnected } = useAccount();
-  const ref = useCoolMode('/rainbow.svg', !isConnected) as Ref<HTMLDivElement>;
+  const ref = useCoolMode('/klaykit.svg', !isConnected) as Ref<HTMLDivElement>;
 
   return (
     <Box
@@ -48,7 +47,7 @@ export default function Home() {
             }}
             weight="bold"
           >
-            RainbowKit
+            KlayKit
           </Text>
           <Text
             as="h2"
@@ -91,9 +90,7 @@ export default function Home() {
           backgroundImage: 'linear-gradient(to bottom, #000, #1C1D1F)',
         }}
       >
-        <Wrapper>
-          <UsedBy />
-        </Wrapper>
+        <Wrapper />
       </Box>
 
       <Playground />
@@ -110,7 +107,7 @@ export default function Home() {
             style={{ lineHeight: 1 }}
             weight="bold"
           >
-            Rainbow 🤝 Developers
+            Made for Developers
           </Text>
           <Text
             align={{ xs: 'left', md: 'center' }}
@@ -121,10 +118,9 @@ export default function Home() {
             style={{ lineHeight: '28px', maxWidth: 720 }}
             weight="semibold"
           >
-            RainbowKit provides a fast, easy and highly customizable way for
-            developers to add a great wallet experience to their application. We
-            handle the hard stuff so developers and teams can focus on building
-            amazing products and communities for their users.
+            KlayKit provides a fast, easy and highly customizable way for
+            developers to add a great wallet experience to their Klaytn
+            application.
           </Text>
 
           <Box marginTop={{ xs: '10', md: '11' }} marginX="auto">
@@ -204,9 +200,9 @@ export default function Home() {
               top="3"
             >
               <NextImage
-                alt="Rainbow logo"
+                alt="KlayKit logo"
                 height={36}
-                src="/rainbow-logo.png"
+                src="/klaykit-logo.png"
                 width={36}
               />
             </Box>
@@ -218,26 +214,12 @@ export default function Home() {
               top="3"
             >
               <NextImage
-                alt="Rainbow logo"
+                alt="KlayKit logo"
                 height={56}
-                src="/rainbow-logo.png"
+                src="/klaykit-logo.png"
                 width={56}
               />
             </Box>
-          </Text>
-          <Text
-            align={{ xs: 'left', md: 'center' }}
-            as="p"
-            marginX="auto"
-            marginY={{ xs: '7', md: '9' }}
-            size={{ xs: '4', md: '5' }}
-            style={{ lineHeight: '28px', maxWidth: 720 }}
-            weight="semibold"
-          >
-            Building RainbowKit has been an incredibly fun effort across many
-            people at Rainbow and our frens at other companies. We&apos;re
-            always looking to make RainbowKit better, so please let us know how
-            we can improve.
           </Text>
 
           <Box
@@ -245,36 +227,7 @@ export default function Home() {
             flexDirection={{ xs: 'column', sm: 'row' }}
             gap={{ xs: '5', sm: '8' }}
             justifyContent="center"
-          >
-            <Button
-              as="a"
-              href="https://twitter.com/rainbowdotme"
-              shadow
-              size="xl"
-              variant="blueGradient"
-            >
-              <Box
-                as="span"
-                marginX={{ sm: '4' }}
-                textAlign="center"
-                width="full"
-              >
-                Follow us on Twitter
-              </Box>
-            </Button>
-            <Button
-              as="a"
-              href="https://github.com/rainbow-me/rainbowkit/discussions/new?category=feedback"
-              shadow
-              size="xl"
-              target="_blank"
-              variant="pinkGradient"
-            >
-              <Box as="span" textAlign="center" width="full">
-                Share feedback with us
-              </Box>
-            </Button>
-          </Box>
+          />
 
           <Box
             display="flex"
@@ -285,30 +238,9 @@ export default function Home() {
             textAlign="center"
           >
             <Text size="4" weight="bold">
-              <Link
-                href="https://github.com/rainbow-me/rainbowkit"
-                variant="gray"
-              >
+              <Link href="https://github.com/Dodecane/klaykit" variant="gray">
                 <span data-emoji>👾</span> github
               </Link>
-            </Text>
-            <Text size="4" weight="bold">
-              <Link href="https://rainbow.me/media-kit.zip" variant="gray">
-                <span data-emoji>⬇️</span> media kit
-              </Link>
-            </Text>
-            <Text size="4" weight="bold">
-              <Link href="https://rainbow.me/terms-of-use" variant="gray">
-                <span data-emoji>📜</span> terms of use
-              </Link>
-            </Text>
-            <Text size="4" weight="bold">
-              <Link href="https://rainbow.me/privacy" variant="gray">
-                <span data-emoji>🔒</span> privacy policy
-              </Link>
-            </Text>
-            <Text color="labelTertiary" size="4" weight="bold">
-              © Rainbow
             </Text>
           </Box>
         </Wrapper>
@@ -319,8 +251,8 @@ export default function Home() {
 
 function InstallScript() {
   const [requestCopy, setRequestCopy] = useState(false);
-  const code = 'npm init @rainbow-me/rainbowkit@latest';
-  const ref = useCoolMode('/rainbow.svg') as Ref<HTMLButtonElement>;
+  const code = 'npm init klaykit@latest';
+  const ref = useCoolMode('/klaykit.svg') as Ref<HTMLButtonElement>;
 
   React.useEffect(() => {
     if (requestCopy) copy(code);

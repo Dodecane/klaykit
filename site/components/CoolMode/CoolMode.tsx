@@ -5,32 +5,20 @@ import React from 'react';
 import { cool } from './CoolMode.css';
 
 export function CoolMode() {
-  const coolCoinbaseRef = useCoolMode('/coinbase.svg');
   const coolMetaMaskRef = useCoolMode('/metaMask.svg');
-  const coolRainbowRef = useCoolMode('/rainbow.svg');
-  const coolArgentRef = useCoolMode('/argent.svg');
+  const coolKaikasRef = useCoolMode('/kaikas.svg');
   const coolWalletConnectRef = useCoolMode('/walletConnect.svg');
-  const coolTrustRef = useCoolMode('/trust.svg');
 
   return (
     <Box className={cool} id="cool-mode-demo">
-      <Box ref={coolRainbowRef}>
-        <CoolButton src="/rainbow.svg">Rainbow</CoolButton>
+      <Box ref={coolKaikasRef}>
+        <CoolButton src="/kaikas.svg">Kaikas</CoolButton>
       </Box>
       <Box ref={coolWalletConnectRef}>
         <CoolButton src="/walletConnect.svg">WalletConnect</CoolButton>
       </Box>
       <Box ref={coolMetaMaskRef}>
         <CoolButton src="/metaMask.svg">MetaMask</CoolButton>
-      </Box>
-      <Box ref={coolCoinbaseRef}>
-        <CoolButton src="/coinbase.svg">Coinbase</CoolButton>
-      </Box>
-      <Box ref={coolArgentRef}>
-        <CoolButton src="/argent.svg">Argent</CoolButton>
-      </Box>
-      <Box ref={coolTrustRef}>
-        <CoolButton src="/trust.svg">Trust</CoolButton>
       </Box>
     </Box>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from 'klaykit';
 import type { NextPage } from 'next';
 import {
   useAccount,
@@ -106,9 +106,9 @@ const Home: NextPage = () => {
                 src="/nft.png"
                 width="500"
                 height="500"
-                alt="RainbowKit Demo NFT"
+                alt="KlayKit Demo NFT"
               />
-              <h1 style={{ marginTop: 24 }}>Rainbow NFT</h1>
+              <h1 style={{ marginTop: 24 }}>KlayKit NFT</h1>
               <ConnectButton />
             </FrontCard>
             <BackCard isCardFlipped={isMinted}>
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
                   src="/nft.png"
                   width="80"
                   height="80"
-                  alt="RainbowKit Demo NFT"
+                  alt="KlayKit Demo NFT"
                   style={{ borderRadius: 8 }}
                 />
                 <h2 style={{ marginTop: 24, marginBottom: 6 }}>NFT Minted!</h2>

@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 import {
   getDefaultWallets,
   RainbowKitProvider,
   Cypress,
   Baobab,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import App from './App';

@@ -1,7 +1,7 @@
 // This example is based on the wagmi SIWE tutorial
 // https://wagmi.sh/examples/sign-in-with-ethereum
 import '../styles/global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 import type { AppProps } from 'next/app';
 import {
   RainbowKitProvider,
@@ -11,7 +11,7 @@ import {
   AuthenticationStatus,
   Cypress,
   Baobab,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { SiweMessage } from 'siwe';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -27,7 +27,7 @@ const { connectors } = getDefaultWallets({
 });
 
 const demoAppInfo = {
-  appName: 'Rainbowkit Demo',
+  appName: 'KlayKit Demo',
 };
 
 const wagmiClient = createClient({

@@ -1,12 +1,12 @@
 import './polyfills';
 import './global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 import {
   Baobab,
   Cypress,
   getDefaultWallets,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import React from 'react';
 import ReactDOM from 'react-dom/client';

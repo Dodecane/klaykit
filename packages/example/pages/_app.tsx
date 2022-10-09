@@ -1,5 +1,5 @@
 import './global.css';
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 import {
   AvatarComponent,
   Baobab,
@@ -10,7 +10,7 @@ import {
   lightTheme,
   midnightTheme,
   RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 
 import { SessionProvider, signOut } from 'next-auth/react';
 import type { AppProps } from 'next/app';
@@ -25,8 +25,6 @@ import {
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import { AppContextProps } from '../lib/AppContextProps';
 
-const RAINBOW_TERMS = 'https://rainbow.me/terms-of-use';
-
 const { chains, provider, webSocketProvider } = configureChains(
   [Cypress, Baobab],
   [jsonRpcProvider({ rpc: chain => ({ http: chain.rpcUrls.default }) })]
@@ -37,15 +35,14 @@ const { connectors } = getDefaultWallets({
 });
 
 const demoAppInfo = {
-  appName: 'Rainbowkit Demo',
+  appName: 'KlayKit Demo',
 };
 
-const DisclaimerDemo: DisclaimerComponent = ({ Link, Text }) => {
+const DisclaimerDemo: DisclaimerComponent = ({ Text }) => {
   return (
     <Text>
-      By connecting, you agree to this demo&apos;s{' '}
-      <Link href={RAINBOW_TERMS}>Terms of Service</Link> and acknowledge you
-      have read and understand our <Link href={RAINBOW_TERMS}>Disclaimer</Link>
+      By connecting, you agree to this demo&apos;s Terms of Service and
+      acknowledge you have read and understand our Disclaimer
     </Text>
   );
 };
@@ -134,9 +131,6 @@ function RainbowKitApp({ Component, pageProps }: AppProps) {
 
   const appContextProps: AppContextProps = { authEnabled };
 
-  // Note: Non-RainbowKit providers are wrapped around this component
-  // at the bottom of the file. This is so that our example app
-  // component can use their corresponding Hooks.
   return (
     <RainbowKitProvider
       appInfo={{
@@ -468,7 +462,7 @@ export default function App(appProps: AppProps) {
   return (
     <>
       <Head>
-        <title>RainbowKit Example</title>
+        <title>KlayKit Example</title>
       </Head>
       <SessionProvider refetchInterval={0} session={appProps.pageProps.session}>
         <WagmiConfig client={wagmiClient}>

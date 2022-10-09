@@ -1,8 +1,4 @@
-import {
-  connectorsForWallets,
-  getDefaultWallets,
-  wallet,
-} from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, getDefaultWallets, wallet } from 'klaykit';
 import React from 'react';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';

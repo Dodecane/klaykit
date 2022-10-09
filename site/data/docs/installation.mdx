@@ -1,49 +1,46 @@
 ---
 title: Installation
-description: Get up and running with RainbowKit
+description: Get up and running with KlayKit
 ---
 
 # Installation
 
-## Get up and running with RainbowKit
+## Get up and running with KlayKit
 
 ### Quick start
 
-You can scaffold a new RainbowKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) app with one of the following commands, using your package manager of choice:
+You can scaffold a new KlayKit + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org) app with one of the following commands, using your package manager of choice:
 
 ```bash
-npm init @rainbow-me/rainbowkit@latest
+npm init klaykit@latest
 # or
-yarn create @rainbow-me/rainbowkit@latest
+yarn create klaykit@latest
 # or
-pnpm create @rainbow-me/rainbowkit@latest
+pnpm create klaykit@latest
 ```
 
 This will prompt you for a project name, generate a new directory containing a boilerplate project, and install all required dependencies.
 
-Alternatively, you can manually integrate RainbowKit into your existing project.
+Alternatively, you can manually integrate KlayKit into your existing project.
 
 ### Manual setup
 
-Install RainbowKit and its peer dependencies, [wagmi](https://wagmi-xyz.vercel.app/) and [ethers](https://docs.ethers.io).
+Install KlayKit and its peer dependencies, [wagmi](https://wagmi-xyz.vercel.app/) and [ethers](https://docs.ethers.io).
 
 ```bash
-npm install @rainbow-me/rainbowkit wagmi ethers
+npm install klaykit wagmi ethers
 ```
 
-> Note: RainbowKit is a [React](https://reactjs.org/) library.
+> Note: klaykit is a [React](https://reactjs.org/) library.
 
 #### Import
 
-Import RainbowKit, wagmi, and ethers.
+Import klaykit, wagmi, and ethers.
 
 ```tsx
-import '@rainbow-me/rainbowkit/styles.css';
+import 'klaykit/styles.css';
 
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-} from '@rainbow-me/rainbowkit';
+import { getDefaultWallets, klaykitProvider } from 'klaykit';
 import {
   chain,
   configureChains,
@@ -105,14 +102,14 @@ const App = () => {
 Then, in your app, import and render the `ConnectButton` component.
 
 ```tsx
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from 'klaykit';
 
 export const YourApp = () => {
   return <ConnectButton />;
 };
 ```
 
-RainbowKit will now handle your user's wallet selection, display wallet/transaction information and handle network/wallet switching.
+KlayKit will now handle your user's wallet selection, display wallet/transaction information and handle network/wallet switching.
 
 #### Additional build tooling setup
 
@@ -120,11 +117,11 @@ Some build tools will require additional setup.
 
 ##### Node polyfills
 
-If your bundler doesn't provide Node polyfills (e.g. [Vite](https://vitejs.dev)), you'll need to include polyfills for `global`, `Buffer` and `process.env`. As an example, you can reference the [polyfills in our sample Vite project.](https://github.com/rainbow-me/rainbowkit/tree/main/examples/with-vite/src/polyfills.ts)
+If your bundler doesn't provide Node polyfills (e.g. [Vite](https://vitejs.dev)), you'll need to include polyfills for `global`, `Buffer` and `process.env`. As an example, you can reference the [polyfills in our sample Vite project.](https://github.com/Dodecane/klaykit/blob/main/examples/with-vite/src/polyfills.ts)
 
 ##### Remix
 
-When using [Remix](https://remix.run), RainbowKit must be added to your list of [server dependencies](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) since it's published as an ESM package.
+When using [Remix](https://remix.run), KlayKit must be added to your list of [server dependencies](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages) since it's published as an ESM package.
 
 ### Add your own functionality
 
@@ -136,9 +133,9 @@ For more detail, view the [wagmi documentation.](https://wagmi.sh)
 
 ### Further examples
 
-To see some running examples of RainbowKit, or even use them to automatically scaffold a new project, check out the [official examples](https://github.com/rainbow-me/rainbowkit/tree/main/examples).
+To see some running examples of KlayKit, or even use them to automatically scaffold a new project, check out the [official examples](https://github.com/Dodecane/klaykit/tree/main/examples).
 
-To try RainbowKit directly in your browser, check out the CodeSandbox links below:
+To try KlayKit directly in your browser, check out the CodeSandbox links below:
 
 - with [Create React App](https://codesandbox.io/s/rainbowkit-create-react-app-1vwx1r)
 - with [Create React App (TypeScript)](https://codesandbox.io/s/rainbowkit-create-typescript-app-xuxnqy)

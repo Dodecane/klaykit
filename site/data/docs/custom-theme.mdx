@@ -14,7 +14,7 @@ description: Creating a custom theme
 While the built-in themes provide some level of customization, the `Theme` type is provided to help you define your own custom themes with lower-level access to the underlying theme variables.
 
 ```tsx
-import { RainbowKitProvider, Theme } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, Theme } from 'klaykit';
 
 const myCustomTheme: Theme = {
   blurs: {
@@ -91,11 +91,7 @@ Import it, along with the theme you want to extend (eg: `darkTheme`) and the Typ
 
 ```tsx
 import merge from 'lodash.merge';
-import {
-  RainbowKitProvider,
-  darkTheme,
-  Theme,
-} from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme, Theme } from 'klaykit';
 ```
 
 Then, merge the built-in theme, with the theme tokens you'd like to override. In this example, I'm overriding the `accentColor` token to match my brand's accent color.
@@ -137,7 +133,7 @@ import {
   cssStringFromTheme,
   lightTheme,
   darkTheme,
-} from '@rainbow-me/rainbowkit';
+} from 'klaykit';
 
 const App = () => {
   return (
