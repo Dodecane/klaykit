@@ -1,10 +1,10 @@
 <a href="https://klaykit.vercel.app/">
-  <img alt="klaykit" src="https://user-images.githubusercontent.com/372831/168174718-685980e0-391e-4621-94a1-29bf83979fa5.png" />
+  <img alt="klaykit" src="https://klaykit.vercel.app/klaykit.svg" />
 </a>
 
 # KlayKit
 
-**The best way to connect Klaytn wallet**
+**The best way to connect a Klaytn wallet**
 
 KlayKit is a [React](https://reactjs.org/) library that makes it easy to add wallet connection to your dapp.
 
@@ -32,9 +32,8 @@ For full documentation, visit [klaykit.vercel.app](https://klaykit.vercel.app/).
 
 You can use the CodeSandbox links below try out KlayKit:
 
-- with [Create React App](https://codesandbox.io/s/rainbowkit-create-react-app-1vwx1r)
-- with [Create React App (TypeScript)](https://codesandbox.io/s/rainbowkit-create-typescript-app-xuxnqy)
-- with [Next.js](https://codesandbox.io/s/rainbowkit-nextjs-gz890p)
+- with [Create React App](https://codesandbox.io/s/klaykit-create-react-app-2r27tu)
+- with [Create React App (TypeScript)](https://codesandbox.io/s/klaykit-create-typescript-app-f8cgph)
 
 ## Examples
 
